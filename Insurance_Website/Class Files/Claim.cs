@@ -12,5 +12,14 @@ namespace Insurance_Website.Class_Files
         //public string Title { get; set; }
         public string PolicyNumber { get; set; }
 
+        public decimal Amount { get; set; }
+
+        public Claim(string subject, string policyNumber, string amount)
+        {
+            Subject = subject;
+            PolicyNumber = policyNumber;
+            Amount = Convert.ToDecimal(amount);
+        }
     }
+
 }
