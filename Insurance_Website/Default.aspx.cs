@@ -16,6 +16,7 @@ namespace Insurance_Website
             {
                 if(Request.QueryString != null)
                 {
+                    var i = Request.Form["firstName"];
                     Policy newPolicy = new Policy(Request.Form["firstName"], Request.Form["lastName"], Request.Form["country"],
                     Request.Form["numCars"], Request.Form["drivingRecord"].ToString());
 

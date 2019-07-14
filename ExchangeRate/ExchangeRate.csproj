@@ -41,9 +41,6 @@
     <Reference Include="Microsoft.Xrm.Sdk">
       <HintPath>..\..\..\InsuranceManagementSystem\packages\Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool.9.0.2.12\tools\Microsoft.Xrm.Sdk.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Xrm.Sdk.Workflow">
-      <HintPath>..\..\..\InsuranceManagementSystem\packages\Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool.9.0.2.12\tools\Microsoft.Xrm.Sdk.Workflow.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Extensions" />

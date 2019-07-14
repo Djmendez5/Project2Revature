@@ -1,22 +1,22 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
-using System.Web.Script.Serialization;
-using ExchangeRateWorkFlow;
-using Microsoft.Xrm.Sdk;
-using Microsoft.Xrm.Sdk.Query;
+using Microsoft.Azure.WebJobs;
 using Microsoft.Xrm.Tooling.Connector;
 
-namespace Testing
+namespace exchangerateupdater
 {
+    // To learn more about Microsoft Azure WebJobs SDK, please see https://go.microsoft.com/fwlink/?LinkID=320976
     class Program
     {
-        static void Main(string[] args)
+        // Please set the following connection strings in app.config for this WebJob to run:
+        // AzureWebJobsDashboard and AzureWebJobsStorage
+        static void Main()
         {
+
             using (var httpClient = new HttpClient())
             {
                 var apiUrl = "http://apilayer.net/api/live?access_key=9c63c5d26713d53732db01f976b86580&currencies=CAD&source=USD&format=1";
@@ -44,6 +44,16 @@ namespace Testing
                 currency.Attributes["exchangerate"] = exchangeRate.Value;
                 service.Update(currency);
             }
+            var config = new JobHostConfiguration();
+
+            if (config.IsDevelopment)
+            {
+                config.UseDevelopmentSettings();
+            }
+
+            var host = new JobHost(config);
+            // The following code ensures that the WebJob will be running continuously
+            host.RunAndBlock();
         }
     }
 }

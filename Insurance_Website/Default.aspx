@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Insurance_Website._Default" %>
 
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
@@ -8,7 +9,7 @@
 
     <div class="row">
         <div class="col-md-6">
-            <form id="policyForm" method="POST" >
+            <form id="policyForm" method="POST">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
                     <input type="text" class="form-control" ID="firstName" name="firstName">

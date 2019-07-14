@@ -8,7 +8,7 @@ using Microsoft.Xrm.Tooling.Connector;
 
 namespace Insurance_Website.Class_Files
 {
-    public class Policy
+    internal class Policy
     {
         public string Name { get; set; }
         public string FirstName { get; set; }

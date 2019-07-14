@@ -6,7 +6,7 @@ using System.Web;
 namespace Insurance_Website.Class_Files
 {
 
-    public class Claim
+    internal class Claim
     {
         public string Subject { get; set; }
         //public string Title { get; set; }

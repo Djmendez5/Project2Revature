@@ -12,3 +12,4 @@ C:\RevatureC#\Project2\Project2Revature\Plugin\obj\Debug\Plugin.csproj.CoreCompi
 C:\RevatureC#\Project2\Project2Revature\Plugin\obj\Debug\Plugin.csproj.CopyComplete
 C:\RevatureC#\Project2\Project2Revature\Plugin\obj\Debug\Plugin.dll
 C:\RevatureC#\Project2\Project2Revature\Plugin\obj\Debug\Plugin.pdb
+C:\RevatureC#\Project2\Project2Revature\Plugin\obj\Debug\Plugin.csprojAssemblyReference.cache

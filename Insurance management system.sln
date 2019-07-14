@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.757
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Plugin", "Plugin\Plugin.csproj", "{A942F2A8-675C-47A1-AE73-2DF58CA5B15D}"
 EndProject
@@ -10,8 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insurance_Website", "Insurance_Website\Insurance_Website.csproj", "{CBCE9E6F-CCD6-4CF2-A30C-9219FFAD40DC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRateWorkFlow", "ExchangeRateWorkFlow\ExchangeRateWorkFlow.csproj", "{22E6097C-162E-4063-9A64-4A453F55A248}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExchangeRate", "ExchangeRate\ExchangeRate.csproj", "{0718E998-F3FC-4762-8EEC-6F88148F1595}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{D78986EE-74C5-48AC-AB4A-E078BF7AB03E}"
 EndProject
@@ -37,10 +35,6 @@ Global
 		{22E6097C-162E-4063-9A64-4A453F55A248}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22E6097C-162E-4063-9A64-4A453F55A248}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22E6097C-162E-4063-9A64-4A453F55A248}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0718E998-F3FC-4762-8EEC-6F88148F1595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0718E998-F3FC-4762-8EEC-6F88148F1595}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0718E998-F3FC-4762-8EEC-6F88148F1595}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0718E998-F3FC-4762-8EEC-6F88148F1595}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D78986EE-74C5-48AC-AB4A-E078BF7AB03E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D78986EE-74C5-48AC-AB4A-E078BF7AB03E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D78986EE-74C5-48AC-AB4A-E078BF7AB03E}.Release|Any CPU.ActiveCfg = Release|Any CPU
