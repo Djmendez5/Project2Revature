@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Tooling.Connector;
@@ -27,15 +28,12 @@ namespace Insurance_Website.Class_Files
         public static void Create(Claim claim)
         {
             string CrmConnectionString = "AuthType=Office365;Url=https://dynamictraining.crm.dynamics.com;UserName=EricBooker@dynamictraining.onmicrosoft.com;Password=teddy1500!@#$";
-
             CrmServiceClient Service = new CrmServiceClient(CrmConnectionString);
-
             Entity entity = new Entity("incident");
-            //entity.Attributes.Add("title", claim.Title);
-            entity.Attributes.Add("subjectid", claim.Subject);
-            entity.Attributes.Add("rev_policynumber", claim.PolicyNumber);
-            entity.Attributes.Add("rev_numberofcars", claim.NumCars);
-            entity.Attributes.Add("rev_drivingrecord", new OptionSetValue(policy.DrivingRecord));
+            entity.Attributes.Add("title", claim.Title);
+            entity.Attributes.Add("rev_accountnumber", claim.AccountNumber);
+            entity.Attributes.Add("rev_amount", claim.Amount);
+            
             Service.Create(entity);
         }
     }

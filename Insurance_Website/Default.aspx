@@ -18,9 +18,12 @@
                     <label for="lastName">Last Name</label>
                     <input type="text" class="form-control" ID="lastName" name="lastName">
                 </div>
-                    <div class="form-group">
+                <div class="form-group">
                     <label for="country">Country</label>
-                    <input type="text" class="form-control" ID="country" name="country">
+                    <select ID="country" name="country">
+                        <option value="Canada">Canada</option>
+                        <option value="United States">United States</option>
+                    </select> 
                 </div>
                 <div class="form-group">
                     <label for="numCars">Number of Cars</label>
