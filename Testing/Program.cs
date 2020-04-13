@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web;
+using System.Web.Script.Serialization;
+using ExchangeRateWorkFlow;
+using Microsoft.Xrm.Sdk;
+using Microsoft.Xrm.Sdk.Query;
+using Microsoft.Xrm.Tooling.Connector;
+
+namespace Testing
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            using (var httpClient = new HttpClient())
+            {
+                var apiUrl = "http://apilayer.net/api/live?access_key=9c63c5d26713d53732db01f976b86580&currencies=CAD&source=USD&format=1";
+
+                //httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
+                //var response = httpClient.GetStringAsync(new Uri(url)).Result;
+                string CrmConnectionString = "AuthType=Office365;Url=https://dynamictraining.crm.dynamics.com;UserName=EricBooker@dynamictraining.onmicrosoft.com;Password=teddy1500!@#$";
+
+                CrmServiceClient service = new CrmServiceClient(CrmConnectionString);
+
+                //var serializer = new JavaScriptSerializer();
+                //dynamic jsonObject = serializer.Deserialize<dynamic>(response);
+                //var value = jsonObject["quotes"]["USDCAD"];
+                //Console.WriteLine(value);
+                //Console.ReadKey();
+
+                //Create the tracing service
+
+                //Create the context
+
+                Entity currency = service.Retrieve("transactioncurrency", new Guid("9e6d3598-5f8f-e911-a9c1-000d3a33afd1"), new ColumnSet(true));
+
+                ExchangeRate exchangeRate = ApiCall.GetExchangeRate(apiUrl);
+
+                currency.Attributes["exchangerate"] = exchangeRate.Value;
+                service.Update(currency);
+            }
+        }
+    }
+}
